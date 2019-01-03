@@ -16,4 +16,4 @@ COPY app /app
 WORKDIR /app
 
 EXPOSE 8000
-CMD ["gunicorn", "-w 4", "--bind", "0.0.0.0:8000", "slackwatcher.wsgi"]
+CMD ["gunicorn", "-w 4", "--bind", "0.0.0.0:8000", "component.wsgi"]
