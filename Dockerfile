@@ -6,7 +6,6 @@ RUN mkdir /install
 ADD app /install
 WORKDIR /install
 
-RUN pip install pipenv && pipenv install pipenv-to-requirements && pipenv run pipenv_to_requirements -f
 RUN pip install --install-option="--prefix=/install" --ignore-installed -r requirements.txt
 
 FROM base
